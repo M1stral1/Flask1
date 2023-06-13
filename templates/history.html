@@ -1,0 +1,23 @@
+{% extends 'main.html' %}
+
+{% block title %}
+All History
+{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <h1>All Story</h1>
+    {% if articles|length > 0 %}
+    {% for el in articles %}
+    <div class="alert alert-info">
+        <h2>{{ el.title }}</h2>
+        <p>{{ el.intro }}</p>
+        <p><b>Data: {{ el.date.date() }}</b></p>
+        <a href="/history/{{ el.id }}" class="btn btn-warning">Detailed</a>
+    </div>
+        {% endfor %}
+    {% else %}
+    <p>No posts on site</p>
+    {% endif %}
+</div>
+{% endblock %}

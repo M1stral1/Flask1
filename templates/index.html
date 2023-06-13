@@ -1,0 +1,79 @@
+{% extends 'main.html' %}
+
+{% block title %}
+Login
+{% endblock %}
+
+{% block body %}
+
+<style>
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .login-form {
+        width: 300px;
+        padding: 20px;
+        background-color: #f0f0f0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .login-form input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    .login-form button {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .login-form .checkbox {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+
+    .login-form .checkbox label {
+        margin: 0;
+    }
+
+    .registration-button {
+        width: 50%;
+        margin: 10px auto;
+    }
+
+</style>
+
+<div class="container">
+    <form class="login-form">
+        <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+
+        <div class="form-floating">
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">Email address</label>
+        </div>
+        <div class="form-floating">
+            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+            <label for="floatingPassword">Password</label>
+        </div>
+
+        <div class="checkbox mb-3">
+            <label for="rememberCheckbox">
+                <input type="checkbox" id="rememberCheckbox" value="remember-me">
+                Remember me
+            </label>
+        </div>
+        <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+        <a class="w-100 btn btn-sm btn-primary registration-button" href="/register">Registration</a>
+        <p class="mt-5 mb-3 text-body-secondary">© 2023–2077</p>
+    </form>
+</div>
+
+{% endblock %}

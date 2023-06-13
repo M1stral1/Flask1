@@ -1,0 +1,17 @@
+{% extends 'main.html' %}
+
+{% block title %}
+Create
+{% endblock %}
+
+{% block body %}
+<div class="container mt-5 text-center">
+    <h1>Create new text</h1>
+    <form method="post">
+        <input type="text" name="title" id="title" class="form-cont mb-3" placeholder="Input name"><br>
+        <textarea name="intro" id="intro" class="form-cont mb-3" placeholder="Input announcement" style="width: 800px;"></textarea><br>
+        <textarea name="text" id="text" class="form-cont mb-3" placeholder="Input main text" style="width: 800px;"></textarea><br>
+        <input type="submit" class="btn btn-primary" value="send"><br>
+    </form>
+</div>
+{% endblock %}
